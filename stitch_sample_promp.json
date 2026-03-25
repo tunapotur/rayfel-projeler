@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "name": "Project Neon",
+    "type": "Portfolio/Landing Page",
+    "theme": "Modern Minimalist",
+    "tone": "Professional yet creative"
+  },
+  "design_system": {
+    "colors": {
+      "primary": "#007BFF",
+      "secondary": "#6C757D",
+      "background": "#F8F9FA",
+      "text_primary": "#212529",
+      "accent": "#FFC107"
+    },
+    "typography": {
+      "heading_font": "Inter, sans-serif",
+      "body_font": "Roboto, sans-serif",
+      "scale": "Major Second"
+    },
+    "border_radius": "12px",
+    "spacing_unit": "8px"
+  },
+  "layout": {
+    "screens": [
+      {
+        "name": "Homepage",
+        "sections": [
+          {
+            "id": "header",
+            "type": "navigation",
+            "elements": ["Logo left", "Nav links center", "CTA button right"]
+          },
+          {
+            "id": "hero",
+            "type": "hero_section",
+            "headline": "Sınırları Zorlayan Tasarımlar",
+            "subheadline": "Yeni nesil dijital deneyimler için Google Stitch ile güçlendirildi.",
+            "cta": "Hemen Başla",
+            "image_style": "Abstract 3D glassmorphism"
+          },
+          {
+            "id": "features",
+            "type": "grid_3_col",
+            "items": [
+              {
+                "title": "Hız",
+                "icon": "bolt",
+                "desc": "Saniyeler içinde prototip."
+              },
+              {
+                "title": "Kod",
+                "icon": "code",
+                "desc": "Tailwind uyumlu çıktı."
+              },
+              {
+                "title": "AI",
+                "icon": "auto_awesome",
+                "desc": "Gemini 3 Pro desteği."
+              }
+            ]
+          },
+          {
+            "id": "footer",
+            "type": "compact_footer",
+            "content": "© 2026 Tüm hakları saklıdır."
+          }
+        ]
+      }
+    ]
+  },
+  "interactions": {
+    "hover_effects": "Subtle scale up",
+    "transitions": "Smooth fade-in"
+  }
+}
