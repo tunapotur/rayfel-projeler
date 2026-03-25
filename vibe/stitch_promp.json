@@ -1,0 +1,139 @@
+{
+  "project_metadata": {
+    "framework": "Next.js 16 (App Router)",
+    "styling": "Tailwind CSS 4 (OKLCH Support)",
+    "ui_library": "shadcn/ui",
+    "theme_mode": "System (Light/Dark support)"
+  },
+  "design_system": {
+    "tokens": {
+      "radius": "0.65rem",
+      "colors_light": {
+        "background": "oklch(1 0 0)",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "primary": "oklch(0.541 0.281 293.009)",
+        "primary_foreground": "oklch(0.969 0.016 293.756)",
+        "secondary": "oklch(0.967 0.001 286.375)",
+        "border": "oklch(0.92 0.004 286.32)",
+        "ring": "oklch(0.702 0.183 293.541)"
+      },
+      "colors_dark": {
+        "background": "oklch(0.141 0.005 285.823)",
+        "foreground": "oklch(0.985 0 0)",
+        "primary": "oklch(0.606 0.25 292.717)",
+        "primary_foreground": "oklch(0.969 0.016 293.756)",
+        "border": "oklch(1 0 0 / 10%)"
+      }
+    }
+  },
+  "global_components": {
+    "header": {
+      "navigation": [
+        "Duyurular",
+        "Haberler",
+        "Hareketlilik",
+        "Yaygınlaştırma",
+        "İletişim"
+      ],
+      "actions": ["Log In (Button)"]
+    },
+    "footer": {
+      "content": "Proje sosyal medya linkleri (Icons: Twitter, LinkedIn, Instagram)",
+      "style": "Centered or Grid layout"
+    }
+  },
+  "routes": [
+    {
+      "path": "/",
+      "name": "Ana Sayfa",
+      "sections": [
+        { "type": "About", "content": "Proje hakkında özet metin" },
+        {
+          "type": "Announcement_Cards",
+          "limit": 3,
+          "layout": "Horizontal Scroll or Grid"
+        },
+        {
+          "type": "Combined_Feed",
+          "content": "Haber, Hareketlilik ve Yaygınlaştırma kartlarının karışık listesi"
+        }
+      ]
+    },
+    {
+      "path": "/duyurular",
+      "name": "Duyurular",
+      "layout": "Card Grid",
+      "component": "AnnouncementCard"
+    },
+    {
+      "path": "/haberler",
+      "name": "Haberler",
+      "layout": "Card Grid",
+      "component": "NewsCard"
+    },
+    {
+      "path": "/hareketlilik",
+      "name": "Hareketlilik",
+      "layout": "Card Grid",
+      "component": "MobilityCard"
+    },
+    {
+      "path": "/yayginlastirma",
+      "name": "Yaygınlaştırma",
+      "layout": "Card Grid",
+      "component": "DisseminationCard"
+    },
+    {
+      "path": "/iletisim",
+      "name": "İletişim",
+      "elements": [
+        "Google Maps/Address",
+        "Phone Link",
+        "Social Media Icons",
+        "Contact Form"
+      ]
+    },
+    {
+      "path": "/login",
+      "name": "Giriş Yap",
+      "form": ["Email", "Password", "Login Button"],
+      "footer_action": "Kayıt ol (Redirects to /register)"
+    },
+    {
+      "path": "/register",
+      "name": "Kayıt Ol",
+      "form": [
+        "Full Name",
+        "Email",
+        "Password",
+        "Confirm Password",
+        "Register Button"
+      ]
+    },
+    {
+      "path": "/post/[id]",
+      "name": "Dinamik İçerik Sayfası",
+      "description": "Haber, Hareketlilik, Yaygınlaştırma ve Duyurular için ortak şablon",
+      "structure": {
+        "header": "Başlık (Title)",
+        "hero": "Manşet Resmi (Hero Image)",
+        "body": "Zengin Metin (Rich Text Content)",
+        "gallery": "Resimler Gridi",
+        "attachments": "Dosya İndirme Bölümü (PDF, DOCX list)"
+      }
+    },
+    {
+      "path": "/admin/post-editor",
+      "name": "İçerik Yönetimi",
+      "description": "Yeni giriş veya düzenleme paneli",
+      "fields": [
+        "Type Selector (Dropdown: Haber, Duyuru, vb.)",
+        "Title Input",
+        "Content Editor",
+        "Cover Image Upload",
+        "Multi-image Upload",
+        "File Attachment Upload"
+      ]
+    }
+  ]
+}
